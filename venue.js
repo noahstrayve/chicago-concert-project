@@ -11,7 +11,18 @@
 
 var database = firebase.database();
 
+//localize selectors.
+var con1 = $("#con1");
+var con2 = $("#con2");
+var con3 = $("#con3");
+var con4 = $("#con4");
+var con5 = $("#con5");
+var con6 = $("#con6");
 
+var name;
+var address;
+var website;
+var image;
 // constructor object for new venues
 function Venue(name, address, website, image)
 {
@@ -39,18 +50,26 @@ var chicagoTheater = new Venue("Chicago Theater", "175 N State St, Chicago, IL 6
 
 
 var venueArray = [uc, aragon, metro, riviera, hob, chicagoTheater];
+var selectorArray = [con1, con2, con3, con4, con5, con6];
+var attrArray = [name, address, website, image];
 
 // function that addsInfo to title page
-
+// take each venue from array
+// 
 function addInfo() {
 	for (var i = 0; i < venueArray.length; i++) {
+		var event = venueArray[i];
+		var venueSelect = selectorArray[i];
+		var venueAttr = attrArray[i];
+		venueSelect.text(event[venueAttr[i]]);
 		var newDiv = $("<div>")
 		newDiv.addClass(`${venueArray[i]}`);
-		newDiv.text(venueArray[i].name);
-		$("#con1").append(newDiv);
-		console.log(venueArray[i].name);
-		console.log(venueArray[i].address);
-		console.log(venueArray[i].website);
+		newDiv.text(event.address, event.website);
+		// newDiv.text(event.website);
+		selectorArray[i].append(newDiv);
+		// console.log(venueArray[i].name);
+		// console.log(venueArray[i].address);
+		// console.log(venueArray[i].website);
 		
 		console.log("-----------------");
 
