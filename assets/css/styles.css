@@ -1,16 +1,13 @@
-.title {
-	background-color: #FFFF00;
+.venue {
+	border: 2px solid black;
+	margin: 2px;
+	width: 45%;
 }
 
-img {
-	width: 100%;
-}
-
-.info {
-	border-bottom: 2px solid gray;
-	margin: 6px 0 7px 6px;
-}
-
-h1, p {
-	text-align: center;
+#venueImage {
+	width: 300px;
+	height: 200px;
+	float: right;
+	margin-right: 50px;
+	position: absolute;
 }
