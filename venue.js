@@ -12,10 +12,10 @@
 var database = firebase.database();
 
 //localize selectors.
-var con1 = $("#venue-1");
-var con2 = $("#con2");
-var con3 = $("#con3");
-var con4 = $("#con4");
+var con1 = $("#name0");
+var con2 = $("#address0");
+var con3 = $("#website0");
+var con4 = $("#image0");
 var con5 = $("#con5");
 var con6 = $("#con6");
 
@@ -52,33 +52,67 @@ var chicagoTheater = new Venue("Chicago Theater", "175 N State St, Chicago, IL 6
 var venueArray = [uc, aragon, metro, riviera, hob, chicagoTheater];
 var selectorArray = [con1, con2, con3, con4, con5, con6];
 var attrArray = [name, address, website, image];
-
+var selectArray = [];
 // function that addsInfo to title page
 // take each venue from array
 // 
+//function to get selector names from length of venue array
+function getSelectors() {
+	for (var i = 0; i < venueArray.length; i++) {
+		venueArray[i]
+
+		var name ="name"+[i];
+		var address = "address"+[i];
+		var website = "website"+[i];
+		var image = "image"+[i];
+		
+		selectArray.push(name);
+		selectArray.push(address);
+		selectArray.push(website);
+		selectArray.push(image);
+		// console.log(selectArray);
+	}
+
+}
+
 var newDiv = $("<div>")
+
 function addInfo() {
 	for (var i = 0; i < venueArray.length; i++) {
 		var event = venueArray[i];
 		var venueSelect = selectorArray[i];
 		// var venueAttr = attrArray[i];
 		
-		newDiv.addClass(`${venueArray[i]}`);
-		newDiv.text(event.address, event.website);
+		// newDiv.text(event.address, event.website);
 		// newDiv.text(event.website);
-		selectorArray[i].append(newDiv);
+		
 		// console.log(venueArray[i].name);
 		// console.log(venueArray[i].address);
 		// console.log(venueArray[i].website);
 		
 		console.log("-----------------");
 
-	var pack = `<p> ${event.address}</p>`;
-
-	con1.append(pack);
-		console.log(pack);
 
 
+		var newContainer = `<div class="row col-md-6 col-sm-6 col-xs-6 venue">`+
+							`<div class="panel panel-default">`+
+							`<div class="panel-heading">`+
+							`<h3 class="panel-title">${event.name}</h3>`+
+							`<div class="panel-body">`+
+							`<div class="row">`+
+							`<div class="col-md-6">`+
+							`<div class="row">`+
+							`<div class="col-md-12 address">${event.address}</div>`+
+							`<div class="row">`+
+							`<div class="col-md-12 website">${event.website}</div>`+
+							`<div class="col-md-6 image">img placeholder</div>`;
+
+							
+
+							
+		$(".top").append(newContainer);
+
+	
 	}
 
 }
