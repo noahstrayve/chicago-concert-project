@@ -3,3 +3,11 @@
 	margin: 2px;
 	width: 45%;
 }
+
+#venueImage {
+	width: 300px;
+	height: 200px;
+	float: right;
+	margin-right: 50px;
+	position: absolute;
+}
