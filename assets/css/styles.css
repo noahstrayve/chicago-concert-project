@@ -1,5 +1,12 @@
-.venue {
+.title {
+	background-color: #FFFF00;
+}
+
+img {
+	width: 100%;
+}
+
+.info {
 	border: 2px solid black;
-	margin: 2px;
-	width: 45%;
+	margin: 2px 0 2px 0;
 }
