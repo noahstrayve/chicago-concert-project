@@ -11,7 +11,7 @@
 
 var database = firebase.database();
 
-var venueArray = [uc, aragon, metro, riviera, hob];
+
 
 function Venue(name, address, phoneNumber, website, image)
 {
@@ -35,10 +35,30 @@ var riviera = new  Venue("Riviera","","","");
 var hob = new Venue("House of Blues", "","","");
 
 
-$("#con1").text(uc.name);
-$("#con2").text(aragon.name);
-$("#con3").text(metro.name);
-$("#con4").text(riviera.name);
-$("#con5").text(hob.name);
+var venueArray = [uc, aragon, metro, riviera, hob];
 
-console.log("linked");
+
+
+function addInfo() {
+	for (var i = 0; i < venueArray.length; i++) {
+		
+		console.log(venueArray[i].name);
+		console.log(venueArray[i].address);
+		console.log("-----------------");
+
+	}
+
+}
+
+addInfo();
+
+
+// function printVenue(object){
+// 	for (var i = 0; i < venueArray.length; i++) {
+// 	console.log(venueArray[i].name);
+
+// }
+
+// }
+
+// printVenue();
