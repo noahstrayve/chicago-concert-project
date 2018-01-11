@@ -19,7 +19,7 @@ function Venue(name, address, website, image)
 	this.address = address;
 	this.website = website;
 	this.image = image;
-
+//hello
 }
 // initilize new venues below
 
