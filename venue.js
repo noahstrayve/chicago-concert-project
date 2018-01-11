@@ -12,7 +12,7 @@
 var database = firebase.database();
 
 //localize selectors.
-var con1 = $("#con1");
+var con1 = $("#venue-1");
 var con2 = $("#con2");
 var con3 = $("#con3");
 var con4 = $("#con4");
@@ -56,13 +56,13 @@ var attrArray = [name, address, website, image];
 // function that addsInfo to title page
 // take each venue from array
 // 
+var newDiv = $("<div>")
 function addInfo() {
 	for (var i = 0; i < venueArray.length; i++) {
 		var event = venueArray[i];
 		var venueSelect = selectorArray[i];
-		var venueAttr = attrArray[i];
-		venueSelect.text(event[venueAttr[i]]);
-		var newDiv = $("<div>")
+		// var venueAttr = attrArray[i];
+		
 		newDiv.addClass(`${venueArray[i]}`);
 		newDiv.text(event.address, event.website);
 		// newDiv.text(event.website);
@@ -73,12 +73,17 @@ function addInfo() {
 		
 		console.log("-----------------");
 
+	var pack = `<p> ${event.address}</p>`;
+
+	con1.append(pack);
+		console.log(pack);
+
+
 	}
 
 }
 
 addInfo();
-
 
 // function printVenue(object){
 // 	for (var i = 0; i < venueArray.length; i++) {
