@@ -11,11 +11,7 @@
 
 var database = firebase.database();
 
-var venue = ["Aragon Ballroom", "United Center", "Metro", "The Riviera"
-			"House of Blues", 
-
-];
-
+var venueArray = [uc, aragon, metro, riviera, hob];
 
 function Venue(name, address, phoneNumber, website, image)
 {
@@ -27,5 +23,22 @@ function Venue(name, address, phoneNumber, website, image)
 
 }
 
-var UC = new Venue("United Center", "3000 w Madison", 
+var uc = new Venue("United Center", "3000 w Madison", 
 					"www.unitedcenter.com", "placeholder")
+
+var aragon = new Venue("Aragon Ballroom","don't know", "www.aragon.com", "placeholder");
+
+var metro = new  Venue("Metro","","","");
+
+var riviera = new  Venue("Riviera","","","");
+
+var hob = new Venue("House of Blues", "","","");
+
+
+$("#con1").text(uc.name);
+$("#con2").text(aragon.name);
+$("#con3").text(metro.name);
+$("#con4").text(riviera.name);
+$("#con5").text(hob.name);
+
+console.log("linked");
