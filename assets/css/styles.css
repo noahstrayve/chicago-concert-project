@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .venue {
 	border: 2px solid black;
 	margin: 2px;
@@ -10,4 +11,21 @@
 	float: right;
 	margin-right: 50px;
 	position: absolute;
+=======
+.title {
+	background-color: #FFFF00;
+}
+
+img {
+	width: 100%;
+}
+
+.info {
+	border-bottom: 2px solid gray;
+	margin: 6px 0 7px 6px;
+}
+
+h1, p {
+	text-align: center;
+>>>>>>> c5ef7b990d6646a71e48f97f39922258422af553
 }
