@@ -8,5 +8,9 @@ img {
 
 .info {
 	border: 2px solid black;
-	margin: 2px 0 2px 0;
+	margin: 6px 0 7px 0;
+}
+
+h1, p {
+	text-align: center;
 }
