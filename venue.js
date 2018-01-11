@@ -1,4 +1,4 @@
- // Initialize Firebase
+	 // Initialize Firebase
  var config = {
    apiKey: "AIzaSyDIlnbkpqY2Eg-QNtpjUBcse4t5kpX8ICU",
    authDomain: "chicago-concert-project.firebaseapp.com",
