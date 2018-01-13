@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .venue {
 	border: 2px solid black;
 	margin: 2px;
@@ -11,7 +10,8 @@
 	float: right;
 	margin-right: 50px;
 	position: absolute;
-=======
+}
+
 .title {
 	background-color: #FFFF00;
 }
@@ -27,5 +27,42 @@ img {
 
 h1, p {
 	text-align: center;
->>>>>>> c5ef7b990d6646a71e48f97f39922258422af553
+
+}
+
+#colorBody {
+	background: #FFF8DC;
+}
+
+#flagWhite {
+	height: 200px;
+	width: 100%;
+	background: white;
+	position: static;
+	padding-top: 20px;
+}
+
+#flagBlueOne {
+	width: 100%;
+	height: 30px;
+	background: #AFEEEE;
+	position: relative;
+}
+
+#flagBlueTwo {
+	width: 100%;
+	height: 30px;
+	background: #AFEEEE;
+	margin-top: 20px;
+	position: relative;
+	
+	position: relative;
+}
+
+#flagText {
+	color: red;
+	font-family: 'Dancing Script', cursive;
+	font-size: 60px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
