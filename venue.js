@@ -79,7 +79,7 @@ function addInfo() {
 	for (var i = 0; i < venueArray.length; i++) {
 		var event = venueArray[i];
 		
-		var newVenueDiv = `<div class="row col-md-6 col-sm-6 col-xs-6 venue">`+
+		var newVenueDiv = `<div class="row col-md-4 col-sm-4 col-xs-4 venue">`+
 							`<div class="panel panel-default">`+
 							`<div class="panel-heading">`+
 							`<h3 class="panel-title" id= "name${i}">${event.name}</h3></div>`+
